@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy – Family Care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand-1: #6e3df5;
+    --brand-2: #386fff;
+    --bg: #f2f3f9;
+    --card: #ffffff;
+    --text: #15162b;
+    --muted: #6b6e86;
+    --line: #ececf4;
+    --shadow: 0 6px 22px rgba(30, 30, 80, .07);
+    --font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  html[lang="ar"] { --font: 'Tajawal', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0e1a;
+      --card: #171829;
+      --text: #f1f2fb;
+      --muted: #9a9db8;
+      --line: #25263b;
+      --shadow: 0 6px 22px rgba(0, 0, 0, .35);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding-bottom: 48px;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+
+  /* Header */
+  header {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    padding: 24px 24px 40px;
+    border-radius: 0 0 38px 38px;
+    background: linear-gradient(225deg, var(--brand-1), var(--brand-2));
+    box-shadow: 0 14px 34px rgba(80, 60, 240, .28);
+  }
+  header::before, header::after {
+    content: ""; position: absolute; border-radius: 50%;
+    background: rgba(255, 255, 255, .1);
+  }
+  header::before { width: 230px; height: 230px; top: -90px; inset-inline-end: -70px; }
+  header::after  { width: 160px; height: 160px; bottom: -50px; inset-inline-start: -40px; background: rgba(255,255,255,.07); }
+  .head-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+  .top-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 26px; }
+  .back {
+    width: 38px; height: 38px; border-radius: 50%; border: 0; cursor: pointer;
+    background: rgba(255,255,255,.2); color: #fff; font-size: 18px;
+    display: grid; place-items: center; backdrop-filter: blur(6px);
+  }
+  .lang {
+    display: inline-flex; padding: 3px; border-radius: 999px; background: rgba(255,255,255,.2);
+    backdrop-filter: blur(6px); direction: ltr;
+  }
+  .lang button {
+    border: 0; background: none; color: #fff; font: inherit; font-size: 13px; font-weight: 700;
+    padding: 6px 14px; border-radius: 999px; cursor: pointer; transition: .25s;
+    font-family: 'Inter', 'Tajawal', sans-serif;
+  }
+  .lang button.on { background: #fff; color: var(--brand-1); }
+  .shield {
+    width: 68px; height: 68px; border-radius: 22px;
+    background: rgba(255,255,255,.2); display: grid; place-items: center;
+    margin-bottom: 16px; backdrop-filter: blur(6px);
+  }
+  .shield svg { width: 34px; height: 34px; }
+  h1 { font-size: 30px; font-weight: 800; margin-bottom: 6px; line-height: 1.25; }
+  header p { font-size: 15px; opacity: .9; max-width: 460px; }
+  .updated {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 16px;
+    padding: 6px 14px; border-radius: 999px; font-size: 12.5px; font-weight: 500;
+    background: rgba(255,255,255,.2);
+  }
+
+  /* Highlights */
+  .chips {
+    display: flex; gap: 10px; overflow-x: auto; padding: 24px 20px 6px;
+    scrollbar-width: none; scroll-snap-type: x proximity;
+  }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: none; display: flex; align-items: center; gap: 10px; scroll-snap-align: start;
+    background: var(--card); padding: 9px 16px; border-radius: 999px;
+    box-shadow: var(--shadow); font-size: 14px; font-weight: 700; white-space: nowrap;
+  }
+  .chip i {
+    font-style: normal; width: 32px; height: 32px; border-radius: 50%;
+    display: grid; place-items: center; font-size: 15px;
+    background: color-mix(in srgb, var(--c) 16%, transparent);
+  }
+
+  /* Sections */
+  .list { padding: 14px 20px 0; display: grid; gap: 12px; }
+  .item {
+    background: var(--card); border-radius: 22px; box-shadow: var(--shadow); overflow: hidden;
+  }
+  .item button.toggle {
+    width: 100%; border: 0; background: none; color: inherit; font: inherit; cursor: pointer;
+    display: flex; align-items: center; gap: 14px; padding: 16px; text-align: start;
+  }
+  .ico {
+    flex: none; width: 46px; height: 46px; border-radius: 15px; font-size: 21px;
+    display: grid; place-items: center;
+    background: color-mix(in srgb, var(--c) 15%, transparent);
+  }
+  .txt { flex: 1; min-width: 0; }
+  .txt h3 { font-size: 16.5px; font-weight: 700; }
+  .txt p { font-size: 13px; color: var(--muted); line-height: 1.55; margin-top: 2px; }
+  .chev {
+    flex: none; width: 10px; height: 10px; margin-inline-end: 4px;
+    border-inline-end: 2.5px solid var(--muted); border-bottom: 2.5px solid var(--muted);
+    transform: rotate(45deg) translateY(-2px); transition: transform .3s ease; opacity: .6;
+  }
+  html[dir="rtl"] .chev { transform: rotate(45deg) translateY(-2px); }
+  .item.open .chev { transform: rotate(-135deg) translateY(-2px); }
+  .body {
+    display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease;
+  }
+  .item.open .body { grid-template-rows: 1fr; }
+  .body > div { overflow: hidden; }
+  .body ul { list-style: none; padding: 14px 18px 18px; border-top: 1px solid var(--line); display: grid; gap: 10px; }
+  .body li { position: relative; padding-inline-start: 18px; font-size: 14.5px; opacity: .9; }
+  .body li::before {
+    content: ""; position: absolute; inset-inline-start: 0; top: 11px;
+    width: 7px; height: 7px; border-radius: 50%; background: var(--c);
+  }
+
+  /* Support */
+  .support {
+    margin: 12px 20px 0; padding: 24px 20px; text-align: center;
+    background: var(--card); border-radius: 24px; box-shadow: var(--shadow);
+  }
+  .support .ico {
+    margin: 0 auto 12px; width: 58px; height: 58px; font-size: 26px; border-radius: 19px;
+    background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  }
+  .support h3 { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+  .support p { font-size: 14px; color: var(--muted); max-width: 400px; margin: 0 auto 18px; }
+  .mail-btn {
+    display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #fff;
+    padding: 14px 28px; border-radius: 16px; font-weight: 700; font-size: 16px;
+    background: linear-gradient(90deg, var(--brand-1), var(--brand-2));
+    box-shadow: 0 10px 24px rgba(90, 70, 245, .3); transition: transform .2s;
+  }
+  .mail-btn:active { transform: scale(.97); }
+  .mail-addr { display: block; margin-top: 14px; font-size: 13.5px; color: var(--muted); direction: ltr; user-select: all; }
+
+  footer { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 26px; }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-inner">
+    <div class="top-row">
+      <button class="back" aria-label="Back" onclick="history.back()">✕</button>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="btn-en" class="on" data-lang="en">EN</button>
+        <button id="btn-ar" data-lang="ar">عربي</button>
+      </div>
+    </div>
+    <div class="shield">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3l8 3v6c0 4.5-3.2 8.2-8 9-4.8-.8-8-4.5-8-9V6l8-3z"/>
+        <path d="M8.5 12.2l2.4 2.4 4.6-4.8"/>
+      </svg>
+    </div>
+    <h1 data-t="title"></h1>
+    <p data-t="intro"></p>
+    <span class="updated">🕒 <span data-t="updated"></span></span>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="chips" id="chips"></div>
+  <div class="list" id="list"></div>
+
+  <section class="support">
+    <div class="ico">🎧</div>
+    <h3 data-t="supportTitle"></h3>
+    <p data-t="supportText"></p>
+    <a class="mail-btn" id="mailBtn" href="#">✉️ <span data-t="supportBtn"></span></a>
+    <span class="mail-addr">omran_adam@yahoo.com</span>
+  </section>
+
+  <footer data-t="footer"></footer>
+</main>
+
+<script>
+  const EMAIL = "omran_adam@yahoo.com";
+
+  const COLORS = ["#5b59f2", "#3399f2", "#33bf8c", "#fba633", "#8c66e6"];
+  const ICONS  = ["📍", "⚙️", "🛡️", "🎛️", "🧒"];
+  const CHIP_COLORS = ["#ec4899", "#10b981", "#f59e0b", "#6366f1"];
+  const CHIP_ICONS  = ["🤚", "🔒", "👁️", "🗑️"];
+
+  const I18N = {
+    en: {
+      dir: "ltr",
+      docTitle: "Privacy Policy – Family Care",
+      title: "Privacy Policy",
+      intro: "At Family Care, we believe your privacy is the foundation of trust. Learn how we protect your data and your family's data.",
+      updated: "Last updated: October 1, 2026",
+      chips: ["We never sell your data", "Fully encrypted", "You're in control", "Delete your data anytime"],
+      sections: [
+        { title: "Information We Collect",
+          summary: "We only collect what's needed to make Circles and alerts work properly.",
+          points: [
+            "Your location while using the app, or in the background when you turn that on.",
+            "Account details: your name, email address, and phone number.",
+            "Device information such as OS version and battery level to improve accuracy.",
+            "Places you add, such as home, work, and school." ] },
+        { title: "How We Use Your Data",
+          summary: "To provide and improve the service and keep your account safe — nothing more.",
+          points: [
+            "Showing your location to the members of your Circle only.",
+            "Sending the arrival and departure alerts that you set up yourself.",
+            "Detecting suspicious activity and protecting your account from unauthorized access.",
+            "Improving app performance and fixing bugs." ] },
+        { title: "Security & Protection",
+          summary: "We protect your data with encryption and multiple layers of security.",
+          points: [
+            "Data is encrypted in transit and at rest.",
+            "Access is limited to authorized team members only.",
+            "Regular security reviews of our systems." ] },
+        { title: "Your Rights & Choices",
+          summary: "You are always in control of your data.",
+          points: [
+            "Pause location sharing at any time from within the app.",
+            "Request a copy of your data or ask us to correct it.",
+            "Permanently delete your account and all your data.",
+            "Leave any Circle whenever you want." ] },
+        { title: "Children's Privacy",
+          summary: "We give parents the tools they need while respecting children's privacy.",
+          points: [
+            "Parents or guardians manage accounts of users under the legal age.",
+            "We do not show targeted ads to children.",
+            "A parent or guardian can request deletion of a child's data at any time." ] }
+      ],
+      supportTitle: "Contact Technical Support",
+      supportText: "Have a question about your privacy or your Family Care account? Our support team is here to help.",
+      supportBtn: "Email Support",
+      mailSubject: "Family Care Support",
+      footer: "©️ 2026 Family Care. All rights reserved."
+    },
+    ar: {
+      dir: "rtl",
+      docTitle: "سياسة الخصوصية – Family Care",
+      title: "سياسة الخصوصية",
+      intro: "في Family Care نؤمن أن خصوصيتك أساس الثقة. اقرأ كيف نحمي بياناتك وبيانات عائلتك.",
+      updated: "آخر تحديث: 1 أكتوبر 2026",
+      chips: ["لا نبيع بياناتك", "تشفير كامل", "أنت المتحكم", "احذف بياناتك متى شئت"],
+      sections: [
+        { title: "البيانات التي نجمعها",
+          summary: "نجمع فقط ما يلزم لتعمل الدوائر والتنبيهات بشكل صحيح.",
+          points: [
+            "الموقع الجغرافي أثناء استخدام التطبيق أو في الخلفية عند تفعيلك لذلك.",
+            "معلومات الحساب: الاسم، البريد الإلكتروني، ورقم الهاتف.",
+            "بيانات الجهاز مثل نسخة النظام ونسبة البطارية لتحسين الدقة.",
+            "سجل الأماكن التي تضيفها كالمنزل والعمل والمدرسة." ] },
+        { title: "كيف نستخدم بياناتك",
+          summary: "لتقديم الخدمة وتحسينها وحماية حسابك، لا أكثر.",
+          points: [
+            "عرض موقعك لأفراد دائرتك فقط.",
+            "إرسال تنبيهات الوصول والمغادرة التي تحددها بنفسك.",
+            "كشف الأنشطة المشبوهة وحماية الحساب من الاختراق.",
+            "تحسين أداء التطبيق وإصلاح الأخطاء." ] },
+        { title: "الأمان والحماية",
+          summary: "نحمي بياناتك بالتشفير وإجراءات أمنية متعددة المستويات.",
+          points: [
+            "تشفير البيانات أثناء النقل والتخزين.",
+            "صلاحيات وصول محدودة لفريق العمل.",
+            "مراجعات أمنية دورية لأنظمتنا." ] },
+        { title: "حقوقك وخياراتك",
+          summary: "أنت المتحكم الأول في بياناتك في أي وقت.",
+          points: [
+            "إيقاف مشاركة الموقع مؤقتًا من داخل التطبيق.",
+            "طلب نسخة من بياناتك أو تصحيحها.",
+            "حذف حسابك وجميع بياناتك نهائيًا.",
+            "مغادرة أي دائرة متى شئت." ] },
+        { title: "خصوصية الأطفال",
+          summary: "نوفر أدوات للأهل مع احترام خصوصية الصغار.",
+          points: [
+            "يتحكم ولي الأمر في حسابات من هم دون السن القانونية.",
+            "لا نعرض إعلانات موجهة للأطفال.",
+            "يمكن لولي الأمر طلب حذف بيانات الطفل في أي وقت." ] }
+      ],
+      supportTitle: "التواصل مع الدعم الفني",
+      supportText: "هل لديك سؤال عن خصوصيتك أو حسابك في Family Care؟ فريق الدعم الفني جاهز لمساعدتك.",
+      supportBtn: "راسل الدعم الفني",
+      mailSubject: "Family Care Support",
+      footer: "©️ 2026 Family Care. جميع الحقوق محفوظة."
+    }
+  };
+
+  const chipsEl = document.getElementById('chips');
+  const listEl  = document.getElementById('list');
+
+  function render(lang) {
+    const t = I18N[lang];
+    document.documentElement.lang = lang;
+    document.documentElement.dir  = t.dir;
+    document.title = t.docTitle;
+
+    document.querySelectorAll('[data-t]').forEach(el => { el.textContent = t[el.dataset.t]; });
+
+    chipsEl.innerHTML = t.chips.map((c, i) =>
+      `<div class="chip" style="--c:${CHIP_COLORS[i]}"><i>${CHIP_ICONS[i]}</i>${c}</div>`).join('');
+
+    listEl.innerHTML = '';
+    t.sections.forEach((s, i) => {
+      const el = document.createElement('div');
+      el.className = 'item';
+      el.style.setProperty('--c', COLORS[i]);
+      el.innerHTML = `
+        <button class="toggle" aria-expanded="false">
+          <div class="ico">${ICONS[i]}</div>
+          <div class="txt"><h3>${s.title}</h3><p>${s.summary}</p></div>
+          <span class="chev"></span>
+        </button>
+        <div class="body"><div><ul>${s.points.map(p => `<li>${p}</li>`).join('')}</ul></div></div>`;
+      const btn = el.querySelector('.toggle');
+      btn.addEventListener('click', () => {
+        const open = el.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+      });
+      listEl.appendChild(el);
+    });
+
+    document.getElementById('mailBtn').href = `mailto:${EMAIL}?subject=${encodeURIComponent(t.mailSubject)}`;
+    document.getElementById('btn-en').classList.toggle('on', lang === 'en');
+    document.getElementById('btn-ar').classList.toggle('on', lang === 'ar');
+    try { localStorage.setItem('familycare-lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang button').forEach(b =>
+    b.addEventListener('click', () => render(b.dataset.lang)));
+
+  // English is the default language; remember the visitor's last choice.
+  let start = 'en';
+  try { const saved = localStorage.getItem('familycare-lang'); if (saved === 'ar' || saved === 'en') start = saved; } catch (e) {}
+  render(start);
+</script>
+</body>
+</html>
